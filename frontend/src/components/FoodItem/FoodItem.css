@@ -44,6 +44,14 @@
 .food-item-name-rating img {
     width: 60px;
 }
+.food-item-restaurant {
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 .food-item-desc {
     color: var(--text-gray);
     font-size: 14px;

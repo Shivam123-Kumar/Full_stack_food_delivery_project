@@ -1,29 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #E23744;
+  --primary-hover: #D02C38;
+  --bg-color: #fcfcfc;
+  --text-dark: #1c1c1c;
+  --text-gray: #696969;
+  --text-light: #9c9c9c;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --transition-speed: 0.3s ease;
+}
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
+  font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
+
 body{
   min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
 }
+
 a{
   text-decoration: none;
   color: inherit;
+  transition: color var(--transition-speed);
 }
+
 .app{
-  width: 80%;
+  width: 85%;
+  max-width: 1280px;
   margin: auto;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
 }
 
 @keyframes fadeIn{
   0%{
     opacity: 0;
+    transform: translateY(10px);
   }
   100%{
     opacity: 1;
+    transform: translateY(0);
   }
 }

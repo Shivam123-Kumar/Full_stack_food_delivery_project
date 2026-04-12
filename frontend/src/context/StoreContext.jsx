@@ -8,6 +8,7 @@ const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
   const [token, setToken] = useState("");
+  const [admin, setAdmin] = useState(false);
   const [food_list, setFoodList] = useState([]);
 
   const addToCart = async (itemId) => {
@@ -82,6 +83,9 @@ const StoreContextProvider = (props) => {
         setToken(localStorage.getItem("token"));
         await loadCardData(localStorage.getItem("token"));
       }
+      if (localStorage.getItem("admin")) {
+        setAdmin(localStorage.getItem("admin"));
+      }
     }
     loadData();
   }, []);
@@ -96,6 +100,8 @@ const StoreContextProvider = (props) => {
     url,
     token,
     setToken,
+    admin,
+    setAdmin,
   };
   return (
     <StoreContext.Provider value={contextValue}>
